@@ -1,4 +1,4 @@
-version: '3.10'
+version: '3.7'
 
 services:
   progsocnet_back:
@@ -13,7 +13,7 @@ services:
   progsocnet_db:
     image: postgres:12.0-alpine
     volumes:
-    - dm_postgres_data:/var/lib/postgresql/data/
+    - progsocnet_postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env.dev
 volumes:
