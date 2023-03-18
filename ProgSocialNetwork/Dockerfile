@@ -5,12 +5,21 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
+
+RUN apt-get update \
+    && apt-get install netcat -y
+RUN apt-get upgrade -y && apt-get install \
+    postgresql gcc python3-dev musl-dev -y
+
 COPY ./req.txt /usr/src/req.txt
 RUN pip install -r /usr/src/req.txt
 
+COPY ./entrypoint.sh /usr/src/app/
+
+
 COPY . /usr/src/app
 
-COPY ./entrypoint.sh .
+RUN chmod 755 /usr/src/app/prestart.sh
 
 EXPOSE 8000
 

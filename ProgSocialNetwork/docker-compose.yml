@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   progsocnet_back:
-    build: ./
+    build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/usr/src/app/
@@ -16,5 +16,7 @@ services:
     - progsocnet_postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env.dev
+    ports:
+      - 5432:5432
 volumes:
   progsocnet_postgres_data:
