@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-class User(AbstractUser):
+class UserNet(AbstractUser):
     """Custom user model"""
     middle_name = models.CharField(max_length=50)
     first_login = models.DateTimeField(null=True)
