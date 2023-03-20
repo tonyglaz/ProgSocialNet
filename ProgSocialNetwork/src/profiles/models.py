@@ -15,4 +15,4 @@ class UserNet(AbstractUser):
     bio = models.TextField(blank=True, null=True)
     github = models.CharField(max_length=500, blank=True, null=True)
     birthday = models.DateField(blank=True, null=True)
-    gender = models.CharField(max_length=6,choices=GENDER)
+    gender = models.CharField(max_length=6,choices=GENDER,default='male')
