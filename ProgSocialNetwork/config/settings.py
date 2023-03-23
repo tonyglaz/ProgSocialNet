@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'djoser',
     'src.profiles',
+    'drf_yasg',
 
 ]
 
