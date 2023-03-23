@@ -5,3 +5,4 @@ psycopg2
 djoser
 djangorestframework_simplejwt
 drf-yasg
+django-cors-headers
