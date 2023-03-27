@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'src.profiles',
     'src.wall',
     'drf_yasg',
+    'mptt',
 
 ]
 

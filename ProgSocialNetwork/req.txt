@@ -6,3 +6,4 @@ djoser
 djangorestframework_simplejwt
 drf-yasg
 django-cors-headers
+django-mptt
